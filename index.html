@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Romanos Renovation &amp; Contracting | Bradford, ON</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--dark:#1a1a2e;--accent:#c8922a;--light-bg:#f9f6f1;--text:#333;--white:#fff}
+body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--white)}
+a{text-decoration:none;color:inherit}
+nav{background:var(--dark);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:70px;position:sticky;top:0;z-index:100}
+.logo{color:var(--white);font-size:1.3rem;font-weight:700;letter-spacing:1px}
+.logo span{color:var(--accent)}
+nav ul{list-style:none;display:flex;gap:30px}
+nav ul a{color:#ccc;font-size:.9rem;transition:color .2s}
+nav ul a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:var(--white)!important;padding:8px 20px;border-radius:4px;font-weight:600}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);color:var(--white);padding:100px 40px;display:flex;flex-direction:column;align-items:flex-start;min-height:560px;justify-content:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,146,42,.15) 0%,transparent 70%);border-radius:50%}
+.hero-badge{background:var(--accent);color:var(--white);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px;display:inline-block}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.15;max-width:650px;margin-bottom:20px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.1rem;max-width:520px;color:#b0b8cc;margin-bottom:36px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:var(--white);padding:14px 32px;border-radius:6px;font-size:1rem;font-weight:700;display:inline-block;transition:background .2s}
+.btn-primary:hover{background:#b07820}
+.btn-secondary{border:2px solid rgba(255,255,255,.4);color:var(--white);padding:14px 32px;border-radius:6px;font-size:1rem;font-weight:600;display:inline-block}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.hero-stats{display:flex;gap:48px;margin-top:56px;border-top:1px solid rgba(255,255,255,.1);padding-top:32px}
+.stat h3{font-size:2rem;font-weight:800;color:var(--accent)}
+.stat p{font-size:.85rem;color:#8090aa;margin-top:4px}
+.trust-bar{background:var(--accent);color:var(--white);text-align:center;padding:14px 40px;font-weight:600;font-size:.95rem}
+section{padding:80px 40px}
+.section-label{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:var(--dark);margin-bottom:16px}
+.subtitle{color:#666;font-size:1.05rem;line-height:1.7;max-width:580px;margin-bottom:48px}
+.services-bg{background:var(--light-bg)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.service-card{background:var(--white);border-radius:12px;padding:32px 28px;box-shadow:0 2px 16px rgba(0,0,0,.06);border-top:4px solid var(--accent);transition:transform .2s}
+.service-card:hover{transform:translateY(-4px)}
+.service-icon{font-size:2.2rem;margin-bottom:16px}
+.service-card h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:10px}
+.service-card p{font-size:.9rem;color:#666;line-height:1.6}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:20px}
+.why-list li{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--light-bg);border-radius:10px}
+.check{width:28px;height:28px;background:var(--accent);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700}
+.why-list li div h4{font-weight:700;color:var(--dark);margin-bottom:4px}
+.why-list li div p{font-size:.88rem;color:#666}
+.why-image{background:linear-gradient(135deg,var(--dark),#0f3460);border-radius:16px;padding:48px;color:var(--white);text-align:center}
+.why-image .big-number{font-size:5rem;font-weight:900;color:var(--accent);line-height:1}
+.why-image p{font-size:1rem;margin-top:12px;color:#99a8bb}
+.rating-stars{color:#f5a623;font-size:1.5rem;margin-top:20px}
+.process-bg{background:var(--dark);color:var(--white)}
+.process-bg h2{color:var(--white)}
+.process-bg .subtitle{color:#8090aa}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;max-width:1000px;margin:0 auto}
+.step{text-align:center;padding:32px 20px;border:1px solid rgba(255,255,255,.08);border-radius:12px}
+.step-num{width:52px;height:52px;background:var(--accent);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;margin:0 auto 20px}
+.step h3{color:var(--white);font-size:1rem;font-weight:700;margin-bottom:10px}
+.step p{font-size:.85rem;color:#8090aa;line-height:1.6}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.testimonial-card{background:var(--light-bg);border-radius:12px;padding:28px}
+.quote-icon{font-size:3rem;color:var(--accent);opacity:.3;line-height:1;margin-bottom:8px}
+.testimonial-card p{font-size:.95rem;color:#444;line-height:1.7;font-style:italic;margin-bottom:20px}
+.reviewer{display:flex;align-items:center;gap:14px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem}
+.reviewer-info strong{display:block;font-size:.9rem;color:var(--dark)}
+.reviewer-info span{font-size:.8rem;color:#888}
+.stars{color:#f5a623;font-size:.85rem;margin-bottom:12px}
+.cta-section{background:linear-gradient(135deg,var(--accent),#a07018);color:var(--white);text-align:center;padding:80px 40px}
+.cta-section h2{color:var(--white);font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:16px}
+.cta-section p{font-size:1.05rem;opacity:.9;max-width:500px;margin:0 auto 36px}
+.btn-white{background:var(--white);color:var(--accent);padding:16px 40px;border-radius:6px;font-size:1rem;font-weight:800;display:inline-block;transition:transform .2s}
+.btn-white:hover{transform:translateY(-2px)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;max-width:1000px;margin:0 auto;align-items:start}
+.contact-item{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start}
+.contact-icon{width:40px;height:40px;background:var(--accent);color:var(--white);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.contact-item div strong{display:block;font-size:.85rem;color:#888;margin-bottom:2px;text-transform:uppercase;letter-spacing:1px}
+.contact-item div span{font-size:.95rem;color:var(--dark);font-weight:600}
+form{display:flex;flex-direction:column;gap:16px}
+form input,form textarea,form select{padding:14px 16px;border:2px solid #e8e0d5;border-radius:8px;font-size:.95rem;font-family:inherit;transition:border-color .2s;background:var(--white);color:var(--text)}
+form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--accent)}
+form textarea{resize:vertical;min-height:120px}
+form button{background:var(--accent);color:var(--white);border:none;padding:16px;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+form button:hover{background:#b07820}
+footer{background:var(--dark);color:#8090aa;padding:40px;text-align:center}
+footer .footer-name{color:var(--white);font-weight:700;font-size:1.1rem;margin-bottom:8px}
+footer .footer-tagline{font-size:.85rem;margin-bottom:20px}
+footer .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+footer .footer-links a{font-size:.85rem;color:#8090aa}
+footer .footer-links a:hover{color:var(--accent)}
+footer .copyright{font-size:.8rem;color:#555}
+.demo-banner{background:#1a1a2e;color:#fff;text-align:center;padding:10px;font-size:.82rem}
+.demo-banner span{color:var(--accent);font-weight:700}
+@media(max-width:768px){nav ul{display:none}.hero{padding:60px 24px}section{padding:60px 24px}.why-grid,.contact-grid{grid-template-columns:1fr}.hero-stats{gap:24px;flex-wrap:wrap}}
+</style>
+</head><body>
+<div class="demo-banner">This is a <span>FREE DEMO</span> website built for Romanos Renovation &amp; Contracting</div>
+<nav>
+  <div class="logo">Romanos<span>.</span></div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Free Quote</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-badge">Bradford, ON &bull; Serving GTA</div>
+  <h1>Your Home,<br/><span>Transformed.</span></h1>
+  <p>Expert renovations for kitchens, bathrooms, basements and full home remodels. Quality craftsmanship, honest pricing, on-time delivery.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Get a Free Quote</a>
+    <a href="#services" class="btn-secondary">View Our Services</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><h3>5.0</h3><p>Google Rating</p></div>
+    <div class="stat"><h3>30+</h3><p>Happy Clients</p></div>
+    <div class="stat"><h3>10+</h3><p>Years Experience</p></div>
+    <div class="stat"><h3>100%</h3><p>Satisfaction</p></div>
+  </div>
+</section>
+<div class="trust-bar">&#11088; 5.0 Google Rating &bull; &#128205; Bradford, ON &bull; &#128222; (647) 545-5009 &bull; &#9989; Licensed &amp; Insured &bull; &#127942; Free Estimates</div>
+<section class="services-bg" id="services">
+<div style="max-width:1100px;margin:0 auto">
+  <div class="section-label">What We Do</div>
+  <h2>Our Renovation Services</h2>
+  <p class="subtitle">From a single room refresh to a complete home transformation.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">&#127859;</div><h3>Kitchen Renovations</h3><p>Custom cabinetry, countertops, tile backsplash, and full kitchen remodels that breathe new life into your home.</p></div>
+    <div class="service-card"><div class="service-icon">&#128705;</div><h3>Bathroom Updates</h3><p>Shower replacements, vanity upgrades, tile work, and full bathroom renovations. Spa-like spaces you'll love.</p></div>
+    <div class="service-card"><div class="service-icon">&#127968;</div><h3>Basement Finishing</h3><p>Transform your basement into a home theatre, gym, or guest suite. Full framing, drywall, and flooring.</p></div>
+    <div class="service-card"><div class="service-icon">&#128296;</div><h3>Full Home Remodels</h3><p>Whole-home renovations from start to finish. One team, one contract, zero headaches.</p></div>
+    <div class="service-card"><div class="service-icon">&#129695;</div><h3>Flooring &amp; Drywall</h3><p>Hardwood, laminate, tile, vinyl plank — expert installation and drywall finishing.</p></div>
+    <div class="service-card"><div class="service-icon">&#127912;</div><h3>Interior Finishing</h3><p>Trim, molding, painting, pot lights — the details that take your renovation to the next level.</p></div>
+  </div>
+</div>
+</section>
+<section id="why">
+<div class="why-grid">
+  <div>
+    <div class="section-label">Why Choose Us</div>
+    <h2>The Romanos Difference</h2>
+    <p class="subtitle">We are not just contractors — we are craftsmen who care about every detail.</p>
+    <ul class="why-list">
+      <li><div class="check">&#10003;</div><div><h4>Meticulous Attention to Detail</h4><p>Clients consistently say we go above and beyond to get every detail right.</p></div></li>
+      <li><div class="check">&#10003;</div><div><h4>Transparent Communication</h4><p>We keep you informed at every stage — no surprises, no hidden costs.</p></div></li>
+      <li><div class="check">&#10003;</div><div><h4>On-Time, On-Budget Delivery</h4><p>We respect your time and budget. Projects completed as promised.</p></div></li>
+      <li><div class="check">&#10003;</div><div><h4>Professional Team, Clean Worksite</h4><p>We treat your home with respect — clean, organized, professional every day.</p></div></li>
+    </ul>
+  </div>
+  <div class="why-image">
+    <div class="big-number">5.0</div>
+    <p>Perfect Google Rating from verified Bradford clients</p>
+    <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p style="margin-top:20px;font-size:.85rem;color:#99a8bb">"Simply the best! Went from an old house we could not live in to a place we dream of coming home to."</p>
+  </div>
+</div>
+</section>
+<section class="process-bg" id="process">
+<div style="max-width:1000px;margin:0 auto;text-align:center">
+  <div class="section-label">How It Works</div>
+  <h2>Our Simple 4-Step Process</h2>
+  <p class="subtitle" style="margin:0 auto 48px">From first call to final reveal — stress-free renovations.</p>
+  <div class="process-steps">
+    <div class="step"><div class="step-num">1</div><h3>Free Consultation</h3><p>We visit your home and listen to your vision — free, no obligation.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Detailed Quote</h3><p>A clear, itemized written quote within days — no surprise add-ons.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>Expert Build</h3><p>Our skilled team gets to work with care and precision.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>Final Walkthrough</h3><p>We are not done until you are 100% happy with the result.</p></div>
+  </div>
+</div>
+</section>
+<section id="testimonials">
+<div style="max-width:1100px;margin:0 auto">
+  <div class="section-label">Client Reviews</div>
+  <h2>What Our Clients Say</h2>
+  <p class="subtitle">Real reviews from real Bradford homeowners.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="quote-icon">"</div><p>Simply the best! Went from an old, dilapidated house to a place we dream of coming home to. Romanos team cares about every detail!</p><div class="reviewer"><div class="avatar">S</div><div class="reviewer-info"><strong>Suha R.</strong><span>Bradford, ON &middot; Kitchen &amp; Full Remodel</span></div></div></div>
+    <div class="testimonial-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="quote-icon">"</div><p>Wonderful job on our white kitchen. Clean, professional, finished on time. My wife is very happy with the result. Highly recommend!</p><div class="reviewer"><div class="avatar">N</div><div class="reviewer-info"><strong>Nathan K.</strong><span>Bradford, ON &middot; Kitchen Renovation</span></div></div></div>
+    <div class="testimonial-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="quote-icon">"</div><p>Could not be happier with the overall remodel. The entire team was a pleasure from initial consultation through the final reveal.</p><div class="reviewer"><div class="avatar">M</div><div class="reviewer-info"><strong>Mukesh K.</strong><span>Bradford, ON &middot; Overall Remodel</span></div></div></div>
+  </div>
+</div>
+</section>
+<div class="cta-section">
+  <h2>Ready to Transform Your Home?</h2>
+  <p>Get a free, no-obligation quote from Bradford's most trusted renovation team.</p>
+  <a href="#contact" class="btn-white">Request a Free Quote Today</a>
+</div>
+<section id="contact">
+<div class="contact-grid">
+  <div>
+    <div class="section-label">Get In Touch</div>
+    <h2>Request a Free Quote</h2>
+    <p style="color:#666;line-height:1.7;margin-bottom:32px">Fill out the form and Raymond will get back to you within 24 hours.</p>
+    <div class="contact-item"><div class="contact-icon">&#128222;</div><div><strong>Phone</strong><span>(647) 545-5009</span></div></div>
+    <div class="contact-item"><div class="contact-icon">&#128205;</div><div><strong>Location</strong><span>208 Rutherford Rd, Bradford, ON</span></div></div>
+    <div class="contact-item"><div class="contact-icon">&#128336;</div><div><strong>Hours</strong><span>Mon&ndash;Sat: 8am &ndash; 6pm</span></div></div>
+    <div class="contact-item"><div class="contact-icon">&#9989;</div><div><strong>Service Area</strong><span>Bradford, Newmarket, Barrie &amp; GTA</span></div></div>
+  </div>
+  <form onsubmit="event.preventDefault();alert('Thanks! Raymond will be in touch within 24 hours.')">
+    <input type="text" placeholder="Your Full Name *" required/>
+    <input type="email" placeholder="Email Address *" required/>
+    <input type="tel" placeholder="Phone Number"/>
+    <select><option value="">Select Service Type</option><option>Kitchen Renovation</option><option>Bathroom Update</option><option>Basement Finishing</option><option>Full Home Remodel</option><option>Flooring &amp; Drywall</option><option>Other</option></select>
+    <textarea placeholder="Tell us about your project..."></textarea>
+    <button type="submit">Send My Request &#8594;</button>
+  </form>
+</div>
+</section>
+<footer>
+  <div class="footer-name">Romanos Renovation &amp; Contracting</div>
+  <div class="footer-tagline">Bradford, Ontario &middot; Trusted Home Renovations</div>
+  <div class="footer-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#process">Process</a><a href="#testimonials">Reviews</a><a href="#contact">Contact</a></div>
+  <div class="copyright">&copy; 2026 Romanos Renovation &amp; Contracting | (647) 545-5009</div>
+</footer>
+</body>
+</html>
